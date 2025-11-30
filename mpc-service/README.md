@@ -268,20 +268,6 @@ minimize: Σ(TOU_price × P_grid × Δt) + demand_rate × peak(P_grid)
 
 ---
 
-## Testing
-```bash
-# Run all tests
-pytest
-
-# With coverage
-pytest --cov=app tests/
-
-# Specific test
-pytest tests/test_optimizer.py -v
-```
-
----
-
 ## Future Work
 
 - **Battery Simulator/Validator Service:** Test MPC performance with simulated battery dynamics
@@ -312,8 +298,8 @@ University of Illinois Research Park
 
 For technical questions or collaboration:
 - GitHub: [github.com/powerboxtech/mpc-service](https://github.com/powerboxtech/mpc-service)
-- Email: [contact information]
+- Email: fatima@powerbox-technology.com
 
 ---
 
-*Built as part of ENG 573 Master's Capstone Project, Fall 2025*
+*Built as part of ENG 573 Master's Capstone Project, Fall 2025
