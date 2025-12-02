@@ -21,7 +21,7 @@ class BatteryClient:
             float: Current state of charge (0-1)
         """
         try:
-            url = f"{self.base_url}/api/battery/soc"
+            url = f"{self.base_url}/battery/soc"
             logger.debug(f"Fetching SOC from: {url}")
             
             response = requests.get(url, timeout=self.timeout)
@@ -57,7 +57,7 @@ class BatteryClient:
             bool: True if command sent successfully, False otherwise
         """
         try:
-            url = f"{self.base_url}/api/battery/dispatch"
+            url = f"{self.base_url}/battery/dispatch"
             
             command = DispatchCommand(
                 power_kw=power_kw,
@@ -69,7 +69,7 @@ class BatteryClient:
             
             response = requests.post(
                 url,
-                json=command.dict(),
+                json=command.model_dump(mode='json'),
                 timeout=self.timeout,
                 headers={"Content-Type": "application/json"}
             )
